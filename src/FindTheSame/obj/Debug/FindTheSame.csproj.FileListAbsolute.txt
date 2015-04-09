@@ -1,0 +1,14 @@
+D:\project\GitHub\FindTheSame\bin\Debug\FindTheSame.exe
+D:\project\GitHub\FindTheSame\bin\Debug\FindTheSame.pdb
+D:\project\GitHub\FindTheSame\bin\Debug\SharpEx.pdb
+D:\project\GitHub\FindTheSame\bin\Debug\SharpEx.xml
+D:\project\GitHub\FindTheSame\obj\Debug\FindTheSame.csprojResolveAssemblyReference.cache
+D:\project\GitHub\FindTheSame\obj\Debug\FindTheSame.exe
+D:\project\GitHub\FindTheSame\obj\Debug\FindTheSame.pdb
+D:\project\GitHub\FindTheSame\src\FindTheSame\obj\Debug\FindTheSame.exe
+D:\project\GitHub\FindTheSame\src\FindTheSame\obj\Debug\FindTheSame.pdb
+D:\project\GitHub\FindTheSame\src\FindTheSame\bin\Debug\FindTheSame.exe
+D:\project\GitHub\FindTheSame\src\FindTheSame\bin\Debug\FindTheSame.pdb
+D:\project\GitHub\FindTheSame\src\FindTheSame\bin\Debug\SharpEx.pdb
+D:\project\GitHub\FindTheSame\src\FindTheSame\bin\Debug\SharpEx.xml
+D:\project\GitHub\FindTheSame\src\FindTheSame\obj\Debug\FindTheSame.csprojResolveAssemblyReference.cache

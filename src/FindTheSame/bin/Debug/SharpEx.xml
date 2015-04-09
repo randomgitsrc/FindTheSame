@@ -1,0 +1,1960 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SharpEx</name>
+    </assembly>
+    <members>
+        <member name="T:SharpEx.XAction">
+            <summary>
+            封装一个方法，该方法不具有参数并且不返回值。
+            </summary>
+        </member>
+        <member name="T:SharpEx.XAction`1">
+            <summary>
+            封装一个方法，该方法具有类型为T的参数和返回值。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+        </member>
+        <member name="T:SharpEx.XActions`1">
+            <summary>
+            封装一个方法，该方法具有类型为T的任意数量参数和返回值。
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="item"></param>
+        </member>
+        <member name="T:SharpEx.XActions">
+            <summary>
+            封装一个方法，该方法具有任意数量的对象参数和返回值
+            </summary>
+            <param name="objs"></param>
+        </member>
+        <member name="T:SharpEx.XAction`2">
+            <summary>
+            封装一个方法，该方法具有两个参数并且不返回值。
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <param name="arg1"></param>
+            <param name="arg2"></param>
+        </member>
+        <member name="T:SharpEx.XAction`3">
+            <summary>
+            封装一个方法，该方法具有三个参数并且不返回值。
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <param name="arg1"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+        </member>
+        <member name="T:SharpEx.XAction`4">
+            <summary>
+            封装一个方法，该方法具有四个参数并且不返回值。
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <typeparam name="T4"></typeparam>
+            <param name="arg1"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+            <param name="arg4"></param>
+        </member>
+        <member name="T:SharpEx.XAction`5">
+            <summary>
+            封装一个方法，该方法具有五个参数并且不返回值。
+            </summary>
+            <typeparam name="T1"></typeparam>
+            <typeparam name="T2"></typeparam>
+            <typeparam name="T3"></typeparam>
+            <typeparam name="T4"></typeparam>
+            <typeparam name="T5"></typeparam>
+            <param name="arg1"></param>
+            <param name="arg2"></param>
+            <param name="arg3"></param>
+            <param name="arg4"></param>
+            <param name="arg5"></param>
+        </member>
+        <member name="T:SharpEx.IniOperator">
+            <summary>
+            *.ini 配置文件操作
+            </summary>
+        </member>
+        <member name="M:SharpEx.IniOperator.SetIniValue(System.String,System.String,System.String,System.String)">
+            <summary>
+            设置配置文件的值
+            </summary>
+        </member>
+        <member name="M:SharpEx.IniOperator.GetIniValue(System.String,System.String,System.String)">
+            <summary>
+            读取配置文件的值 string
+            </summary>
+        </member>
+        <member name="M:SharpEx.IniOperator.GetIniValueToDouble(System.String,System.String,System.String,System.Double)">
+            <summary>
+            读取配置文件的值 double
+            </summary> 
+        </member>
+        <member name="M:SharpEx.IniOperator.GetIniValueToFloat(System.String,System.String,System.String,System.Single)">
+            <summary>
+            读取配置文件的值 float
+            </summary> 
+        </member>
+        <member name="M:SharpEx.IniOperator.GetIniValueToInt(System.String,System.String,System.String,System.Int32)">
+            <summary>
+            读取配置文件的值 int
+            </summary> 
+        </member>
+        <member name="M:SharpEx.IniOperator.GetIniValueToBool(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            读取配置文件的值 bool
+            </summary> 
+        </member>
+        <member name="M:SharpEx.IniOperator.ReadSection(System.String,System.String)">
+            <summary>
+            从INI文件中读取指定Section所有Ident添加到列表中
+            </summary>
+            <param name="iniPath"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.IniOperator.ReadIniFile(System.String)">
+            <summary>
+            解析标准格式的INI配置文件。
+            识别 '//','#' 的注释标识
+            </summary>
+            <param name="filepath"></param>
+            <param name="modelFolder"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.IniOperator.ReadIniCodeTable(System.String,System.String)">
+            <summary>
+            解析标准格式的INI配置文件中的一个配置部分
+            </summary>
+            <param name="inifile"></param>
+            <param name="section"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.FileParser">
+            <summary>
+            基础文件解析读取类
+            </summary>
+        </member>
+        <member name="M:SharpEx.FileParser.GetFileLines(System.String,System.Boolean)">
+            <summary>
+            读取一个文本文件，返回文件所有行。
+            </summary>
+            <param name="RemoveEmptyEntries">是否过滤空字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FileParser.GetFileLinesSplitContent(System.String,System.Char[])">
+            <summary>
+            读取一个文本文件，返回文件所有行，并按照分隔符进行分割。
+            </summary>
+            <param name="file">文本文件路径</param>
+            <param name="splitchar">单行分割字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FileParser.GetFileAllString(System.String)">
+            <summary>
+            读取一个文本文件，返回所有内容
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FileParser.GetFileAllStringBuilder(System.String)">
+            <summary>
+            读取一个文本文件，返回所有内容，一般用于处理大文件内容
+            </summary>
+            <param name="file"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.CsvHelper">
+            <summary>
+            CSV文件转换类
+            </summary>
+        </member>
+        <member name="M:SharpEx.CsvHelper.DatatableToCSV(System.Data.DataTable,System.String,System.String,System.String)">
+            <summary>
+            导出报表为Csv
+            </summary>
+            <param name="dt">DataTable</param>
+            <param name="strFilePath">物理路径</param>
+            <param name="tableheader">表头</param>
+            <param name="columname">字段标题,逗号分隔</param>
+        </member>
+        <member name="M:SharpEx.CsvHelper.CSVToDatatable(System.String,System.Int32,System.Data.DataTable)">
+            <summary>
+            将Csv读入DataTable
+            </summary>
+            <param name="filePath">csv文件路径</param>
+            <param name="n">表示第n行是字段title,第n+1行是记录开始</param>
+        </member>
+        <member name="T:SharpEx.EnumHelper">
+            <summary>
+            枚举类型方法
+            </summary>
+        </member>
+        <member name="M:SharpEx.EnumHelper.GetDescription(System.Enum,System.Boolean)">
+            <summary>
+            扩展方法，获得枚举的Description。
+            示例格式：[Description("星期一")]
+            </summary>
+            <param name="value">枚举值</param>
+            <param name="nameInstead">当枚举值没有定义DescriptionAttribute，是否使用枚举名代替，默认是使用</param>
+            <returns>枚举的Description</returns>
+        </member>
+        <member name="M:SharpEx.EnumHelper.EnumToDictionary``1">
+            <summary>
+            把枚举转换为键值对集合
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.EnumHelper.EnumToDictionary(System.Type,System.Func{System.Enum,System.String})">
+            <summary>
+            把枚举转换为键值对集合
+            </summary>
+            <param name="enumType">枚举类型</param>
+            <param name="getText">获得值得文本</param>
+            <returns>以枚举值为key，枚举文本为value的键值对集合</returns>
+        </member>
+        <member name="M:SharpEx.EnumHelper.GetEnumDictionary(System.Type)">
+            <summary>
+            把枚举转换为枚举名称与描述的对应集合
+            </summary>
+            <param name="enumType">枚举类型</param> 
+            <returns>以枚举名称为key，枚举描述为value的键值对集合</returns>
+        </member>
+        <member name="M:SharpEx.EnumHelper.GetEnumNames(System.Type)">
+            <summary>
+            遍历Enum类中的数据，获得枚举字段名集合
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.EnumHelper.GetEnumDescriptions(System.Type)">
+            <summary>
+            遍历Enum类中的数据，获得枚举字段名描述集合
+            </summary>
+            <param name="enumType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.MathFunction">
+            <summary>
+            公用静态方法类-数学和平面计算相关
+            </summary>
+        </member>
+        <member name="M:SharpEx.MathFunction.GetLength(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            计算平面两点长度
+            </summary>
+            <param name="startPnt"></param>
+            <param name="endPnt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcRotateAngle(System.Drawing.PointF,System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            求两向量的夹角[0,180]
+            </summary>
+            <param name="ptAnchor"></param>
+            <param name="ptON"></param>
+            <param name="ptOM"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcPointsAngle(System.Drawing.Point,System.Drawing.Point,System.Boolean)">
+            <summary>
+            计算屏幕上两点之间的角度
+            </summary>
+            <param name="PtBegin"></param>
+            <param name="PtEnd"></param>
+            <param name="isHudu"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcGeoHeading(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算两个地理点之间的方位角；
+            正北为轴，逆时针为正(0>>180)，反之为负(0>>-180)
+            </summary>
+            <param name="lon1"></param>
+            <param name="lat1"></param>
+            <param name="lon2"></param>
+            <param name="lat2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcGeoTilt(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算两个地理点之间的俯仰角；
+            水平倾角为0，竖直倾角为90
+            </summary>
+            <param name="lon1"></param>
+            <param name="lat1"></param>
+            <param name="alt1"></param>
+            <param name="lon2"></param>
+            <param name="lat2"></param>
+            <param name="alt2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcHeading(System.Double,System.Double)">
+            <summary>
+            计算方向角。
+            平面坐标系中，O为原点坐标，向量(OX+OY)与正Y方向的夹角。 
+            </summary> 
+            <returns>方向角角度数</returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcTilt(System.Double,System.Double,System.Double)">
+            <summary>
+            计算俯仰角。
+            计算直角坐标系中，O为原点,向量(OX+OY+OZ)与向量(OX+OY)之间的夹角。 
+            </summary> 
+            <returns>俯仰角角度数</returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.GetCenterLocation(System.Drawing.Size,System.Drawing.Rectangle)">
+            <summary>
+            获得内Size在外Rectangle的中心时，左上点的位置
+            </summary>
+            <param name="size">窗体大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.RotatePoint(System.Drawing.PointF,System.Single,System.Drawing.PointF[])">
+            <summary>
+            计算一个点相对于基准点ptBase转过changedAngle角度之后的坐标
+            </summary>
+            <param name="changedAngle">角度值</param>
+        </member>
+        <member name="M:SharpEx.MathFunction.Factorial(System.Int32)">
+            <summary>
+            计算阶乘
+            </summary>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcGeoDistanceSimple(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算两个地理点之间的距离
+            </summary>
+            <param name="from">lon,lat</param>
+            <param name="to">lon,lat</param>
+            <returns>距离（米）</returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcGeoDistance(System.Double,System.Double,System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算两个地理点之间的距离，使用球体假设。
+            考虑地形高程差。
+            计算经纬度距离的matlab版本（参考了http://www.ga.gov.au/geodesy/calcs/ 的方法）
+            </summary>
+            <param name="lon1"></param>
+            <param name="lat1"></param>
+            <param name="alt1"></param>
+            <param name="lon2"></param>
+            <param name="lat2"></param>
+            <param name="alt2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcGeoDistance(System.Double,System.Double,System.Double,System.Double)">
+            <summary>
+            计算两个地理点之间的距离，使用球体假设。
+            计算经纬度距离的matlab版本（参考了http://www.ga.gov.au/geodesy/calcs/ 的方法）
+            </summary> 
+            <returns>距离（米）</returns>
+        </member>
+        <member name="M:SharpEx.MathFunction.CalcGeoDistance(System.Double,System.Double,System.Double,System.Double,SharpEx.MathFunction.GaussSphere)">
+            <summary>
+            计算两个地理点之间的距离，使用椭球体假设
+            Google
+            </summary> 
+            <param name="gs">参考椭球</param>
+            <returns>距离（米）</returns>
+        </member>
+        <member name="P:SharpEx.MathFunction.DegreesPerKilloMeter">
+            <summary>
+            在地理坐标系下 1KM距离对应的度数，在中纬度附近比较有效
+            </summary>
+        </member>
+        <member name="P:SharpEx.MathFunction.MetersPerDegree">
+            <summary>
+            在地理坐标系下 1度对应的距离，在中纬度附近比较有效
+            </summary>
+        </member>
+        <member name="T:SharpEx.MathFunction.GaussSphere">
+            <summary>
+            高斯投影中所选用的参考椭球
+            </summary>
+        </member>
+        <member name="T:SharpEx.RegexHelper">
+            <summary>
+            操作正则表达式的公共类
+            </summary>    
+        </member>
+        <member name="M:SharpEx.RegexHelper.IsMatch(System.String,System.String)">
+            <summary>
+            验证输入字符串是否与模式字符串匹配，匹配返回true
+            </summary>
+            <param name="input">输入字符串</param>
+            <param name="pattern">模式字符串</param>        
+        </member>
+        <member name="M:SharpEx.RegexHelper.IsMatch(System.String,System.String,System.Text.RegularExpressions.RegexOptions)">
+            <summary>
+            验证输入字符串是否与模式字符串匹配，匹配返回true
+            </summary>
+            <param name="input">输入的字符串</param>
+            <param name="pattern">模式字符串</param>
+            <param name="options">筛选条件</param>
+        </member>
+        <member name="T:SharpEx.ConverterHelper">
+            <summary>
+            常用类型操作和数据单位转换函数
+            </summary>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Int32,System.Int32)">
+            <summary>
+            将int转为byte[]
+            </summary>
+            <param name="i"></param>
+            <param name="byteNum">字节长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Char)">
+            <summary>
+            将char转为byte[]
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Single,System.Int32)">
+            <summary>
+            将float转为byte[]
+            </summary>
+            <param name="f"></param>
+            <param name="byteNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Double,System.Int32)">
+            <summary>
+            将double转为byte[]
+            </summary>
+            <param name="d"></param>
+            <param name="byteNum"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Char[])">
+            <summary>
+            将char[]转为byte[]
+            </summary>
+            <param name="c"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Char[],System.Int32)">
+            <summary>
+            将char[]转为长度为num的byte[]
+            </summary>
+            <param name="c"></param>
+            <param name="num">字节长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.Int64,System.Int32)">
+            <summary>
+            将long转为长度为byteNum的byte[]
+            </summary>
+            <param name="l"></param>
+            <param name="byteNum">字节长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBytes(System.String)">
+            <summary>
+            将string转为byte[]
+            </summary>
+            <param name="s"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetCharArrayCopy(System.Char[],System.Char[])">
+            <summary>
+            将字符数组拷贝到目标数组中
+            </summary>
+            <param name="source"></param>
+            <param name="target"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetDouble(System.String,System.Double)">
+            <summary>
+            将字符串转为 double
+            </summary>
+            <param name="strValue"></param>
+            <param name="defaultvalue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetFloat(System.String,System.Single)">
+            <summary>
+            将字符串转为 float
+            </summary>
+            <param name="strValue"></param>
+            <param name="defaultvalue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetInt(System.String,System.Int32)">
+            <summary>
+            将字符串转为 int
+            </summary>
+            <param name="strValue"></param>
+            <param name="defaultvalue">默认值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.GetBool(System.String,System.Boolean)">
+            <summary>
+            将字符串转为 bool，支持 True = {true, True, TRUE, 1}
+            </summary>
+            <param name="strValue"></param>
+            <param name="identify1">检测字符串为(int)1， 则返回 true</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.DegreeToRadian(System.Double)">
+            <summary>
+            角度转弧度
+            </summary>
+            <param name="degree"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.RadiansToDegree(System.Double)">
+            <summary>
+            弧度转角度
+            </summary>
+            <param name="radian"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.DegreeDMSToDecimal(System.Double,System.Double,System.Double)">
+            <summary>
+            度分秒转小数度数
+            </summary>
+            <param name="du"></param>
+            <param name="fen"></param>
+            <param name="miao"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ConverterHelper.DegreeDMSToDecimal(System.String)">
+            <summary>
+            度分秒转小数度数
+            </summary>
+            <param name="dufenmiao">度分秒数据(44º45'604)(118°29.590)，支持分隔符 º'.°′″</param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.GraphicsHelper">
+            <summary>
+            GDI绘制辅助
+            </summary>
+        </member>
+        <member name="M:SharpEx.GraphicsHelper.CreatePen(System.String,System.Nullable{System.Single},System.Nullable{System.Drawing.Color},System.Nullable{System.Single},System.Drawing.Pen)">
+            <summary>
+            创建衬色画笔
+            </summary>
+            <param name="style">衬色类型（0：外衬，1：内衬，2：双衬）</param>
+            <param name="maincolor">主线颜色（默认红色）</param>
+            <param name="mainwidth">主线线宽（默认值2f）</param>
+            <param name="matcolor">衬色线颜色（默认黄色）</param>
+            <param name="matwidth">衬色线线宽（默认值2f）</param>
+            <returns>衬色画笔数组</returns>
+        </member>
+        <member name="T:SharpEx.HookMouseKeyboard">
+            <summary>
+            全局鼠标和键盘钩子
+            </summary>
+        </member>
+        <member name="T:SharpEx.FileWriter">
+            <summary>
+            基础写文件类
+            </summary>
+        </member>
+        <member name="M:SharpEx.FileWriter.WriteFile(System.String,System.String,System.Boolean)">
+            <summary>
+            写文件
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="content">文件内容</param>
+            <param name="append">是否为追加内容模式</param>
+        </member>
+        <member name="M:SharpEx.FileWriter.AppendText(System.String,System.String)">
+            <summary>
+            追加文件
+            </summary>
+            <param name="path">文件路径</param>
+            <param name="content">内容</param>
+        </member>
+        <member name="M:SharpEx.FileWriter.WriteFile(System.String,System.Byte[])">
+            <summary>
+            写文件
+            </summary>
+            <param name="path"></param>
+            <param name="bytes"></param>
+        </member>
+        <member name="T:SharpEx.StringHelper">
+            <summary>
+            字符操作辅助
+            </summary>
+        </member>
+        <member name="M:SharpEx.StringHelper.RepairString(System.String,System.Int32,System.String)">
+            <summary>
+            指定字符串的固定长度，如果字符串小于固定长度，
+            则在字符串的前面补足零，可设置的固定长度最大为9位
+            </summary>
+            <param name="text">原始字符串</param>
+            <param name="limitedLength">字符串的固定长度</param>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.KeyboardHook">
+            <summary>
+            Captures global keyboard events
+            </summary>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.GlobalHook">
+            <summary>
+            Abstract base class for Mouse and Keyboard hooks
+            </summary>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.MouseHook">
+            <summary>
+            Captures global mouse events
+            </summary>
+        </member>
+        <member name="T:SharpEx.XMLSerialize">
+            <summary>
+            XML序列化。（已过时，请使用SerializeHelper）
+            </summary>
+        </member>
+        <member name="M:SharpEx.XMLSerialize.Save``1(``0,System.String)">
+            <summary>
+            序列化成xml文件 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="o"></param>
+            <param name="filePath"></param>
+        </member>
+        <member name="M:SharpEx.XMLSerialize.Read``1(System.String)">
+            <summary>
+            整个xml文件反序列化 
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="filePath"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.Log5">
+            <summary>
+            日志记录与操作类
+            </summary>
+        </member>
+        <member name="F:SharpEx.Log5._sys_err_log_name">
+            <summary>
+            错误日志名
+            </summary>
+        </member>
+        <member name="F:SharpEx.Log5._sys_normal_log_name">
+            <summary>
+            普通日志名
+            </summary>
+        </member>
+        <member name="F:SharpEx.Log5._sys_debug_log_name">
+            <summary>
+            调试日志名
+            </summary>
+        </member>
+        <member name="M:SharpEx.Log5.#ctor">
+            <summary>
+            标准构造函数
+            </summary>
+        </member>
+        <member name="M:SharpEx.Log5.#ctor(System.String)">
+            <summary>
+            指定错误日志路径的构造函数
+            </summary>
+            <param name="errfile">错误日志路径</param>
+        </member>
+        <member name="M:SharpEx.Log5.#ctor(System.String,System.String)">
+            <summary>
+            指定错误日志路径和普通日志路径的构造函数
+            </summary>
+            <param name="errfile">错误日志路径</param>
+            <param name="normalfile">普通日志路径</param>
+        </member>
+        <member name="M:SharpEx.Log5.#ctor(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            指定错误日志路径，普通日志路径以及调试日志路径的构造函数
+            </summary>
+            <param name="errfile">错误日志路径</param>
+            <param name="normalfile">普通日志路径</param>
+            <param name="debug">是否启用调试</param>
+            <param name="debugfile">调试文件</param>
+        </member>
+        <member name="M:SharpEx.Log5.#ctor(System.String,System.String,System.Boolean,System.String,System.Int32)">
+            <summary>
+            指定错误日志路径，普通日志路径，调试日志路径和默认缓存大小的构造函数
+            </summary>
+            <param name="errfile">错误日志路径</param>
+            <param name="normalfile">普通日志路径</param>
+            <param name="debug">是否启用调试</param>
+            <param name="debugfile">调试文件</param>
+            <param name="buffersize">默认缓存大小</param>
+        </member>
+        <member name="M:SharpEx.Log5.initVars">
+            <summary>
+            初始化默认值，可以从文件配置中读取
+            </summary>
+        </member>
+        <member name="M:SharpEx.Log5.Error(System.String)">
+            <summary>
+            写错误日志
+            </summary>
+            <param name="err">日志文本</param>
+        </member>
+        <member name="M:SharpEx.Log5.Error(System.String,System.Object[])">
+            <summary>
+            写含有参数的错误日志
+            </summary>
+            <param name="err">日志文本</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:SharpEx.Log5.Normal(System.String)">
+            <summary>
+            写普通日志
+            </summary>
+            <param name="normalstr">日志文本</param>
+        </member>
+        <member name="M:SharpEx.Log5.Normal(System.String,System.Object[])">
+            <summary>
+            写含有参数的普通日志
+            </summary>
+            <param name="normalstr">日志文本</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:SharpEx.Log5.Debug(System.String)">
+            <summary>
+            写调试日志
+            </summary>
+            <param name="debugstr">调试文本</param>
+        </member>
+        <member name="M:SharpEx.Log5.Debug(System.String,System.Object[])">
+            <summary>
+            写含有参数的调试日志
+            </summary>
+            <param name="debugstr">调试文本</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:SharpEx.Log5.Log(System.String,System.String)">
+            <summary>
+            写日志
+            </summary>
+            <param name="logname">已创建的日志名称</param>
+            <param name="str">日志文本</param>
+        </member>
+        <member name="M:SharpEx.Log5.Log(System.String,System.String,System.Object[])">
+            <summary>
+            写带有参数的日志
+            </summary>
+            <param name="logname">已创建的日志名称</param>
+            <param name="fmt">日志文本</param>
+            <param name="args">参数</param>
+        </member>
+        <member name="M:SharpEx.Log5.CreateLog(System.String,System.String)">
+            <summary>
+            创建日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="filepath">日志路径</param>
+        </member>
+        <member name="M:SharpEx.Log5.CreateLog(System.String,System.String,System.Boolean,SharpEx.ShowFileType)">
+            <summary>
+            创建日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="filepath">日志路径</param>
+            <param name="showlineno">是否添加行号</param>
+            <param name="showfile">是否添加文件名</param>
+        </member>
+        <member name="M:SharpEx.Log5.CreateLog(System.String,System.String,System.Boolean,SharpEx.ShowFileType,System.Int32)">
+            <summary>
+            创建日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="filepath">日志路径</param>
+            <param name="showlineno">是否添加行号</param>
+            <param name="showfile">是否添加文件名</param>
+            <param name="buffsize">缓存大小</param>
+        </member>
+        <member name="M:SharpEx.Log5.CreateLog(System.String,System.String,System.Boolean,SharpEx.ShowFileType,System.String)">
+            <summary>
+            创建日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="filepath">日志路径</param>
+            <param name="showlineno">是否添加行号</param>
+            <param name="showfile">是否添加文件名</param>
+            <param name="dateformat">日期格式</param>
+        </member>
+        <member name="M:SharpEx.Log5.CreateLog(System.String,System.String,System.Boolean,SharpEx.ShowFileType,System.Text.Encoding)">
+            <summary>
+            创建日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="filepath">日志路径</param>
+            <param name="showlineno">是否添加行号</param>
+            <param name="showfile">是否添加文件名</param>
+            <param name="enc">日志编码</param>
+        </member>
+        <member name="M:SharpEx.Log5.CreateLog(System.String,System.String,System.Boolean,SharpEx.ShowFileType,System.Int32,System.Text.Encoding,System.String)">
+            <summary>
+            创建日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="filepath">日志路径</param>
+            <param name="showlineno">是否添加行号</param>
+            <param name="showfile">是否添加文件名</param>
+            <param name="buffsize">缓存大小</param>
+            <param name="enc">日志编码</param>
+            <param name="dateformat">日期格式</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetAutoGenerateFilename(System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            自动生成文件名
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="bauto">打开或关闭自动生成</param>
+            <param name="dir">日志目录</param>
+            <param name="autoname">文件名格式</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetBufferSize(System.String,System.Int32)">
+            <summary>
+            设置日志缓存大小，单位字节
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="newbuffersize">缓存大小</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetShowLineNumber(System.String,System.Boolean)">
+            <summary>
+            设置日志是否显示行号
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="bshow">是否显示行号</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetShowFilePath(System.String,SharpEx.ShowFileType)">
+            <summary>
+            设置日志是否显示文件路径
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="bshow">是否显示路径</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetShowMethod(System.String,System.Boolean)">
+            <summary>
+            设置日志是否显示方法名
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="bshow">是否显示方法名</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetLogFile(System.String,System.String)">
+            <summary>
+            设置新的日志路径
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="newfile">新路径</param>
+        </member>
+        <member name="M:SharpEx.Log5.SetLogEncoding(System.String,System.Text.Encoding)">
+            <summary>
+            设置日志的文件编码
+            </summary>
+            <param name="logname">已存在的日志名</param>
+            <param name="enc">编码</param>
+        </member>
+        <member name="M:SharpEx.Log5.GetLogInfo(System.String)">
+            <summary>
+            获取一个日志实体
+            </summary>
+            <param name="logname"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.Log5.Dispose">
+            <summary>
+            IDispose接口
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.ErrorFile">
+            <summary>
+            默认错误日志路径
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.NormalFile">
+            <summary>
+            默认普通日志路径
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.DebugFile">
+            <summary>
+            默认调试日志路径
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.EnableDebug">
+            <summary>
+            是否启用调试，暂时没用到
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.BufferSize">
+            <summary>
+            缓存大小，单位字节。
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.ShowLineNo">
+            <summary>
+            默认是否在日志中显示行号
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.ShowFile">
+            <summary>
+            默认是否在日志中显示文件名
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.ShowMethod">
+            <summary>
+            默认是否在日志中显示方法名
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.Dateformat">
+            <summary>
+            默认日志中的日期格式，例如yyyy-MM-dd HH:mm:ss
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5.LogEncoding">
+            <summary>
+            默认的日志编码
+            </summary>
+        </member>
+        <member name="F:SharpEx.Log5Info.AutofilenameExpr">
+            <summary>
+            自动生成文件名的格式
+            </summary>
+        </member>
+        <member name="F:SharpEx.Log5Info.logqueue">
+            <summary>
+            日志缓存
+            </summary>
+        </member>
+        <member name="M:SharpEx.Log5Info.#ctor(System.String,System.String)">
+            <summary>
+            构造一个日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="logfile">日志路径</param>
+        </member>
+        <member name="M:SharpEx.Log5Info.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造一个日志
+            </summary>
+            <param name="logname">日志名称</param>
+            <param name="logdir">日志目录</param>
+            <param name="filename">日志文件名，不含路径</param>
+        </member>
+        <member name="M:SharpEx.Log5Info.PrepareLogDir(System.String)">
+            <summary>
+            创建目录
+            </summary>
+            <param name="dir"></param>
+            <returns>是否成功</returns>
+        </member>
+        <member name="P:SharpEx.Log5Info.Logname">
+            <summary>
+            日志名称
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.Logfile">
+            <summary>
+            日志路径
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.BufferSize">
+            <summary>
+            缓存大小
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.ShowLineNo">
+            <summary>
+            是否显示行号
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.ShowFile">
+            <summary>
+            显示文件名，文件路径，或者不显示
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.ShowMethod">
+            <summary>
+            是否显示方法名
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.Dateformat">
+            <summary>
+            日期格式
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.AutoGenerateFilename">
+            <summary>
+            是否自动生成文件名，当为true时，Logfile无效
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.AutoFileDir">
+            <summary>
+            自动生成文件名是，文件的目录
+            </summary>
+        </member>
+        <member name="P:SharpEx.Log5Info.LogEncoding">
+            <summary>
+            日志编码
+            </summary>
+        </member>
+        <member name="T:SharpEx.ArrayHelper">
+            <summary>
+            数组与列表操作帮助类
+            </summary>
+        </member>
+        <member name="T:SharpEx.XMLHelper">
+            <summary>
+            xml文档操作类
+            </summary>
+        </member>
+        <member name="M:SharpEx.XMLHelper.CreateXmlDocument(System.String,System.String)">
+            <summary>
+            创建XML文档
+            </summary>
+            <param name="name">根节点名称</param>
+            <param name="type">根节点的一个属性值</param>
+            <returns></returns>
+            moss中调用方法：创建的文件如果要存到moss的文档库中,则：
+                     XmlDocument doc = XmlOperate.CreateXmlDocument("project", "T");
+                       在此可嵌入增加子节点方法,如AddTaskNode(taskObj, ref doc); ..
+                     byte[] fileContent = Encoding.UTF8.GetBytes(doc.OuterXml);
+                     folder.Files.Add("name.xml", fileContent, true);
+                     web.Update();
+            .net中调用方法：写入文件中,则：
+                     document = XmlOperate.CreateXmlDocument("sex", "sexy");
+                     document.Save("c:/bookstore.xml");         
+        </member>
+        <member name="M:SharpEx.XMLHelper.AddNewNode1(System.Xml.XmlDocument@,System.String,System.String)">
+            <summary>
+            在根节点下增加子元素
+            </summary>
+            <param name="document"></param>
+            <param name="nodeName"></param>
+            <param name="type"></param>
+            调用方法：
+                 document = xmloper.CreateXmlDocument("animal", "carnivore");
+                 XmlOperate.AddNewNode1(ref document, "carnivore", "high");
+        </member>
+        <member name="M:SharpEx.XMLHelper.AddNewNode2(System.Xml.XmlElement@,System.String,System.String)">
+             <summary>
+             在元素下增加子元素
+             </summary>
+             <param name="element"></param>
+             <param name="nodeName"></param>
+             <param name="type"></param>
+             调用方法：
+                   XmlDocument document = new XmlDocument();
+                   先取到相应的元素,然后调用该方法在该元素下增加子元素
+                   XmlElement root = (XmlElement)document.SelectSingleNode("//animal/third");
+                   XmlOperate.AddNewNode2(ref root,"thaw","boost investor confidence");
+            注意上面的"//animal/third"也可换成"workflow[@type='T' and @isSpecial='1']"这种形式用来获取带有相应属性的元素
+        </member>
+        <member name="M:SharpEx.XMLHelper.GetDesiredNode(System.String)">
+            <summary>
+            获取类型为制定值的一组节点
+            </summary>
+            <param name="type">类型值。E.G.workflow[@type='T' and @isSpecial='1']</param>
+            <returns></returns>
+            注意：返回的 XmlNodeList 类型是个类似于arraylist的类型,所以要得到它的值只能遍历
+        </member>
+        <member name="M:SharpEx.XMLHelper.GetXMLDocumentFromWebPage(System.String)">
+            <summary>
+            抓取网页上的xml文档赋值给XmlDocument对象
+            </summary>
+            <param name="url">网页的url（网页的内容必须是xml格式的）</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.XMLHelper.GetXMLFile(System.String)">
+            <summary>
+            获取服务器上指定文件的xml文件内容
+            </summary>
+            <param name="location"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.XMLHelper.GetDataSetByXml(System.String)">
+            <summary>
+            读取xml直接返回DataSet 
+            </summary>
+            <param name="strXmlPath">xml文件相对路径</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.XMLHelper.GetDataViewByXml(System.String,System.String,System.String)">
+            <summary>
+            读取Xml返回一个经排序或筛选后的DataView 
+            </summary>
+            <param name="strXmlPath">xml文件相对路径</param>
+            <param name="strWhere">筛选条件,如："name = ＇kgdiwss＇"</param>
+            <param name="strSort">排序条件,如："Id desc"</param>
+            <returns></returns>        
+        </member>
+        <member name="M:SharpEx.XMLHelper.WriteXmlByDataSet(System.String,System.String[],System.String[])">
+            
+            向Xml文件插入一行数据 
+            
+            xml文件相对路径 
+            要插入行的列名数组,如：string[] Columns = {"name","IsMarried"}; 
+            要插入行每列的值数组,如：string[] ColumnValue={"明天去要饭","false"}; 
+            成功返回true,否则返回false 
+        </member>
+        <member name="M:SharpEx.XMLHelper.UpdateXmlRow(System.String,System.String[],System.String[],System.String,System.String)">
+            
+            更行符合条件的一条Xml记录 
+            
+            XML文件路径 
+            列名数组 
+            列值数组 
+            条件列名 
+            条件列值 
+            
+        </member>
+        <member name="M:SharpEx.XMLHelper.DeleteXmlRowByIndex(System.String,System.Int32)">
+            
+            通过删除DataSet中iDeleteRow这一行,然后重写Xml以实现删除指定行 
+            
+            
+            要删除的行在DataSet中的Index值 
+        </member>
+        <member name="M:SharpEx.XMLHelper.DeleteXmlRows(System.String,System.String,System.String[])">
+            
+            删除strColumn列中值为ColumnValue的行 
+            
+            xml相对路径 
+            列名 
+            strColumn列中值为ColumnValue的行均会被删除 
+            
+        </member>
+        <member name="M:SharpEx.XMLHelper.DeleteXmlAllRows(System.String)">
+            
+            删除所有行 
+            
+            XML路径 
+            
+        </member>
+        <member name="M:SharpEx.XMLHelper.GetXmlFullPath(System.String)">
+            
+            返回完整路径 
+            
+            Xml的路径 
+            
+        </member>
+        <member name="T:SharpEx.InvokeHelper">
+            <summary>  
+            A thread-safe control invoker helper class.  
+            </summary>  
+        </member>
+        <member name="M:SharpEx.InvokeHelper.GetPropertyInfo(System.Windows.Forms.Control,System.Object,System.String)">
+            <summary>
+            获得属性信息
+            </summary>
+            <param name="control"></param>
+            <param name="noncontrol"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.InvokeHelper.ExcuteMethod(System.Windows.Forms.Control,System.String,System.Object[])">
+            <summary>
+            跨线程执行控件方法
+            </summary>
+            <param name="control"></param>
+            <param name="methodName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.InvokeHelper.GetProperty``1(System.Windows.Forms.Control,System.String)">
+            <summary>
+            获得控件属性值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="control"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.InvokeHelper.GetProperty(System.Windows.Forms.Control,System.String)">
+            <summary>
+            获得控件属性值 
+            </summary>
+            <param name="control"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.InvokeHelper.GetProperty(System.Windows.Forms.Control,System.Object,System.String)">
+            <summary>
+            获得控件属性值
+            </summary>
+            <param name="control"></param>
+            <param name="noncontrol"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.InvokeHelper.SetProperty(System.Windows.Forms.Control,System.String,System.Object)">
+            <summary>
+            设置控件属性值
+            </summary>
+            <param name="control"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:SharpEx.InvokeHelper.SetProperty(System.Windows.Forms.Control,System.Object,System.String,System.Object)">
+            <summary>
+            设置控件属性值
+            </summary>
+            <param name="control"></param>
+            <param name="noncontrol"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:SharpEx.InvokeHelper.MethodInvoker">
+            <summary>
+            方法执行委托
+            </summary>
+            <param name="control"></param>
+            <param name="methodName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.InvokeHelper.PropertyGetInvoker">
+            <summary>
+            获取属性委托
+            </summary>
+            <param name="control"></param>
+            <param name="noncontrol"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.InvokeHelper.PropertySetInvoker">
+            <summary>
+            设置属性委托
+            </summary>
+            <param name="control"></param>
+            <param name="noncontrol"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="T:SharpEx.FormsManager">
+            <summary>
+            规则统一的窗体打开管理类，限制重复打开窗体 ;
+            说明：IWin32Window若为空时，使用全局统一的控件BaseIWin32Window，所以最好设置一下其父窗体为项目主窗体。
+            Version 1.1.
+            By Wangxz
+            </summary>
+        </member>
+        <member name="F:SharpEx.FormsManager.FormList">
+            <summary>
+            当前已经打开的窗口对象列表
+            </summary>
+        </member>
+        <member name="M:SharpEx.FormsManager.AfterFormClosed(System.Object,System.Windows.Forms.FormClosedEventArgs)">
+            <summary>
+            关闭窗体时发生
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:SharpEx.FormsManager.CloseAllForm">
+            <summary>
+            关闭当前所有的窗体
+            </summary>
+        </member>
+        <member name="M:SharpEx.FormsManager.IsFormExist(System.Object@,System.String)">
+            <summary>
+            查看已打开的窗口是否包括该名称的对象
+            </summary>
+            <param name="formName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm``1(System.Type[],System.Object[],System.Windows.Forms.FormStartPosition,System.Drawing.Point,System.Windows.Forms.IWin32Window,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            创建或获得窗体
+            </summary>
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm``1(System.String)">
+            <summary>
+            打开无构造参数窗体
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenFormWithArgs``1(System.Object[])">
+            <summary>
+            打开具有构造参数的窗体。注意：不支持数组类型的参数。
+            </summary>
+            <typeparam name="T">窗体类型</typeparam>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm``1(System.Windows.Forms.IWin32Window,System.Boolean)">
+            <summary>
+            打开窗体
+            </summary>
+            <typeparam name="T">窗体类型</typeparam>
+            <param name="showower">父window</param>
+            <param name="IsShowDialog"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm``1(System.Type[],System.Object[])">
+            <summary>
+            打开窗体
+            </summary>
+            <typeparam name="T">窗体类型</typeparam>
+            <param name="construct_types">构造类型</param>
+            <param name="construct_values">构造值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm``1(System.Boolean,System.Windows.Forms.IWin32Window)">
+            <summary>
+            打开窗体并居中显示
+            </summary> 
+            <param name="isCenterScreen">在屏幕居中显示，否则在父窗体中居中</param> 
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm``1(System.Drawing.Point)">
+            <summary>
+            打开窗体并自定义显示位置
+            </summary> 
+        </member>
+        <member name="M:SharpEx.FormsManager.OpenForm(System.Type,System.Type[],System.Object[],System.Windows.Forms.FormStartPosition,System.Drawing.Point,System.Windows.Forms.IWin32Window,System.Boolean,System.Boolean,System.String)">
+            <summary>
+            打开窗体
+            </summary>
+            <param name="type">窗体对象类型，如： typeof(Form)</param>
+            <param name="construct_types">构造函数所需类型集合，如： new Type[] { typeof(string), typeof(int) }</param>
+            <param name="construct_values">构造函数传递参数集合，必须与类型相一致，如： new Object[] { "helloworld"， 101 }</param>
+            <param name="_startposition"></param>
+            <param name="location"></param>
+            <param name="showower">窗体Ower</param>
+            <param name="show"></param>
+            <param name="isshowdialog"></param>
+            <param name="formflag">窗体唯一标示，可不填，默认使用窗体类型作为标示</param>
+            <param name="openexsitform">只返回已打开的窗体</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FormsManager.GetControl(System.Windows.Forms.Control,System.String)">
+            <summary>
+            从控件中获得子空间中名称为name的控件
+            </summary>
+            <param name="control"></param>
+            <param name="name"></param>
+            <returns></returns>
+        </member>
+        <member name="P:SharpEx.FormsManager.DefaultLocation">
+            <summary>
+            窗体默认打开位置
+            </summary>
+        </member>
+        <member name="T:SharpEx.Log">
+            <summary>
+            日志记录与操作类
+            </summary>
+        </member>
+        <member name="M:SharpEx.Log.Write(System.String,System.Object[])">
+            <summary>
+            写格式化字符串日志
+            </summary>
+            <param name="format">格式化字符串</param>
+            <param name="args">格式化字符</param>
+        </member>
+        <member name="M:SharpEx.Log.Write(System.String,SharpEx.Levels)">
+            <summary>
+            写调试日志
+            </summary> 
+        </member>
+        <member name="M:SharpEx.Log.Write(System.Exception,SharpEx.Levels)">
+            <summary>
+            写捕获异常日志
+            </summary> 
+        </member>
+        <member name="M:SharpEx.Log.Write(System.String,System.Exception,SharpEx.Levels)">
+            <summary>
+            写捕获异常日志
+            </summary> 
+        </member>
+        <member name="P:SharpEx.Log.IsOn">
+            <summary>
+            调试日志开启状态
+            </summary>
+        </member>
+        <member name="T:SharpEx.Levels">
+            <summary>
+            错误等级
+            </summary>
+        </member>
+        <member name="F:SharpEx.Levels.Warning">
+            <summary>
+            警告
+            </summary>
+        </member>
+        <member name="F:SharpEx.Levels.Error">
+            <summary>
+            错误
+            </summary>
+        </member>
+        <member name="T:SharpEx.ExtensionMethods">
+            <summary>
+            公共类的简单扩展方法
+            </summary>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetDeepClone(System.Object)">
+            <summary>
+            获得对象的深度拷贝，请确保对象已标记为可序列化 [Serializable]
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetDeepClone``1(System.Object)">
+            <summary>
+            获得对象的深度拷贝，请确保对象标记为可序列化 [Serializable]
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetKeys``1(System.Collections.IDictionary)">
+            <summary>
+            获得 键/值 对集合的 键集合
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="dict"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetValues``1(System.Collections.IDictionary,System.Boolean)">
+            <summary>
+            获得 键/值 对集合的 值集合
+            </summary>
+            <typeparam name="T">类型</typeparam>
+            <param name="dict"></param>
+            <param name="allowRepeat">允许有重复值存在</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetKeys``2(System.Collections.Generic.IDictionary{``0,``1})">
+            <summary>
+            获得字典对象的键(key)列表
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="dict"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetValues``2(System.Collections.Generic.IDictionary{``0,``1},System.Boolean)">
+            <summary>
+            获得字典对象的值(value)列表
+            </summary>
+            <typeparam name="K"></typeparam>
+            <typeparam name="V"></typeparam>
+            <param name="dict"></param>
+            <param name="allowRepeat">允许有重复值存在</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.IsNullOrEmpty(System.String)">
+            <summary>
+            指示指定的字符串是 null 还是 System.String.Empty 字符串。
+            </summary>
+            <param name="value">要测试的字符串。</param>
+            <returns>如果 value 参数为 null 或空字符串 ("")，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetLength2(System.Drawing.Point)">
+            <summary>
+            获得Point点距离原点的距离的平方
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetLength(System.Drawing.Point)">
+            <summary>
+            获得Point点距离原点的距离
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetLength(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            获得两个Point点的距离
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetSub(System.Drawing.Point,System.Drawing.Point)">
+            <summary>
+            获得两个Point相减的量
+            </summary>
+            <param name="point1"></param>
+            <param name="point2"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetLength(System.Drawing.PointF)">
+            <summary>
+            获得PointF点距离原点的距离
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetLength(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            获得两个PointF点的距离
+            </summary>
+            <param name="point"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ExtensionMethods.GetSub(System.Drawing.PointF,System.Drawing.PointF)">
+            <summary>
+            获得两个PointF相减的量
+            </summary>
+            <param name="point1"></param>
+            <param name="point2"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.TxtFileEncoding">
+            <summary>
+            解析文本编码(Encoding)
+            </summary>
+        </member>
+        <member name="M:SharpEx.TxtFileEncoding.GetEncoding(System.String)">
+            <summary>
+            取得一个文本文件的编码方式。如果无法在文件头部找到有效的前导符，Encoding.Default将被返回。
+            </summary>
+            <param name="fileName">文件名。</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.TxtFileEncoding.GetEncoding(System.IO.FileStream)">
+            <summary>
+            取得一个文本文件流的编码方式。
+            </summary>
+            <param name="stream">文本文件流。</param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:SharpEx.TxtFileEncoding.GetEncoding(System.String,System.Text.Encoding)”忽略有格式错误的 XML 注释 -->
+        <member name="M:SharpEx.TxtFileEncoding.GetEncoding(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            取得一个文本文件流的编码方式-是否为UTF8格式
+            </summary>
+            <param name="stream">文本文件流</param>
+            <param name="defaultEncoding">默认编码方式。当该方法无法从文件的头部取得有效的前导符时，将返回该编码方式。</param>
+            <param name="seekAllToConfirmUTF8">读取整个文件，以确定为UTF8编码格式</param>
+            <param name="seekUTF8Num">(seekAllToConfirmUTF8 = false)，当达到该数量的字节数时，即判断该文档为UTF8格式</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.TxtFileEncoding.CheckBytes(System.Byte[],System.Int32,System.Int32[])">
+            <summary>
+            判断字节一致性
+            </summary>
+            <param name="bytes"></param>
+            <param name="count"></param>
+            <param name="values"></param>
+            <returns></returns>
+        </member>
+        <member name="F:SharpEx.TxtFileEncoding.SeekAllToConfirmUTF8">
+            <summary>
+            读取全部数据，以有效确定编码
+            </summary>
+        </member>
+        <member name="F:SharpEx.TxtFileEncoding.SeekUTF8Num">
+            <summary>
+            当不读取全部数据时，寻找到有效byte数量后即确定为utf8
+            </summary>
+        </member>
+        <member name="M:SharpEx.TxtFileEncoding.IsUTF8WithoutBOM(System.IO.Stream)">
+            <summary>
+            判断是否为UTF-8格式.包含UTF8无Bom
+            </summary>
+            <param name="stream"></param>
+            <returns></returns>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.MousePoint">
+            <summary>
+            And X, Y point on the screen
+            </summary>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.MouseButton">
+            <summary>
+            Mouse buttons that can be pressed
+            </summary>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.MouseSimulator">
+            <summary>
+            Operations that simulate mouse events
+            </summary>
+        </member>
+        <member name="M:SharpEx.MouseKeyboard.MouseSimulator.MouseDown(SharpEx.MouseKeyboard.MouseButton)">
+            <summary>
+            Press a mouse button down
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:SharpEx.MouseKeyboard.MouseSimulator.MouseUp(SharpEx.MouseKeyboard.MouseButton)">
+            <summary>
+            Let a mouse button up
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:SharpEx.MouseKeyboard.MouseSimulator.Click(SharpEx.MouseKeyboard.MouseButton)">
+            <summary>
+            Click a mouse button (down then up)
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:SharpEx.MouseKeyboard.MouseSimulator.DoubleClick(SharpEx.MouseKeyboard.MouseButton)">
+            <summary>
+            Double click a mouse button (down then up twice)
+            </summary>
+            <param name="button"></param>
+        </member>
+        <member name="M:SharpEx.MouseKeyboard.MouseSimulator.Show">
+            <summary>
+            Show a hidden current on currently application
+            </summary>
+        </member>
+        <member name="M:SharpEx.MouseKeyboard.MouseSimulator.Hide">
+            <summary>
+            Hide mouse cursor only on current application's forms
+            </summary>
+        </member>
+        <member name="P:SharpEx.MouseKeyboard.MouseSimulator.Position">
+            <summary>
+            Gets or sets a structure that represents both X and Y mouse coordinates
+            </summary>
+        </member>
+        <member name="P:SharpEx.MouseKeyboard.MouseSimulator.X">
+            <summary>
+            Gets or sets only the mouse's x coordinate
+            </summary>
+        </member>
+        <member name="P:SharpEx.MouseKeyboard.MouseSimulator.Y">
+            <summary>
+            Gets or sets only the mouse's y coordinate
+            </summary>
+        </member>
+        <member name="T:SharpEx.Hotkey">
+            <summary>
+            全局快捷键注册类，设置后将占用系统键盘，谨慎使用
+            </summary>
+        </member>
+        <member name="T:SharpEx.FileOperate">
+            <summary>
+            文件、路径、对话框类操作
+            </summary>
+        </member>
+        <member name="M:SharpEx.FileOperate.GetOpenFileDialogPath(System.String,System.String,System.String)">
+            <summary>
+            打开文件对话框，获得文件路径字符串，如果相应参数不想赋值，则参数赋为""，若结果获取失败则返回""
+            </summary>
+            <param name="Title">对话框标题</param>
+            <param name="InitialDirectory">初始目录</param>
+            <param name="Filter">文件过滤设置</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:SharpEx.FileOperate.GetOpenFileDialogPaths(System.String,System.String,System.String)">
+            <summary>
+            打开文件对话框，获得文件路径字符串，如果相应参数不想赋值，则参数赋为""，若结果获取失败则返回""
+            </summary>
+            <param name="Title">对话框标题</param>
+            <param name="InitialDirectory">初始目录</param>
+            <param name="Filter">文件过滤设置</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:SharpEx.FileOperate.GetSaveFileDialogPath(System.String,System.String,System.String,System.String)">
+            <summary>
+            保存文件对话框，获得文件路径字符串，如果相应参数不想赋值，则参数赋为""，若结果获取失败则返回""
+            </summary>
+            <param name="Title">对话框标题</param>
+            <param name="InitialDirectory">初始目录</param>
+            <param name="Filter">文件过滤设置</param>
+            <param name="DefaultFileName">默认文件名</param>
+            <returns>文件路径</returns>
+        </member>
+        <member name="M:SharpEx.FileOperate.GetOpenDirectoryPath(System.String,System.String)">
+            <summary>
+            浏览文件目录，获得文件夹路径。若结果获取失败则返回""
+            </summary>
+            <param name="description"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FileOperate.GetEnumFolder(System.String)">
+            <summary>
+            遍历文件夹，返回所有非空目录路径。包含当前目录。
+            </summary>
+            <param name="dir"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FileOperate.CopyDirectory(System.String,System.String)">
+            <summary>
+            拷贝文件夹，复制文件夹到目标文件夹的子目录
+            CopyDirectory("c:\\downloads","d:\\");
+            </summary>
+            <param name="fromFolder"></param>
+            <param name="toFolder"></param>
+        </member>
+        <member name="M:SharpEx.FileOperate.GetAbsolutePath(System.String,System.Boolean)">
+            <summary>
+            返回给定字符串对应的绝对路径。 
+            </summary>
+            <param name="strpath">输入路径，如果输入以"\\"开头的字符串，则将其作为应用目录内的相对路径返回对应的绝对路径</param>
+            <param name="judgePathExsit">是否判断路径是否存在，不存在的话返回空字符串</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.FileOperate.DeleteDir(System.String)">
+            <summary>
+            指定文件夹下面的所有内容Detele,小心操作，删除之后无法恢复。       
+            </summary>
+            <param name="aimPath"></param>
+        </member>
+        <member name="T:SharpEx.ReflectionHelper">
+            <summary>
+            反射方法
+            </summary>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetConstructObject(System.String,System.Object[])">
+            <summary>
+            构造一个无参数或有参数的对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetConstructObj``1(System.Object[])">
+            <summary>
+            构造一个无参数或有参数对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetConstructObject(System.Type,System.Object[])">
+            <summary>
+            构造无参数或有参数的对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetConstructObj``1(System.Type[],System.Object[])">
+            <summary>
+            构造一个对象
+            </summary>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetConstructObject(System.Type,System.Type[],System.Object[])">
+            <summary>
+            构造一个对象
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="construct_types">构造参数类型</param>
+            <param name="construct_values">构造参数值</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.ExcuteMethod``1(System.Object,System.String,System.Object[])">
+            <summary>
+            执行方法
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="methodName"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.ExcuteMethod(System.Object,System.String,System.Object[])">
+            <summary>
+            执行方法
+            </summary>
+            <param name="obj">实例对象</param>
+            <param name="methodName">方法名称</param>
+            <param name="args">方法参数</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetProperty``1(System.Object,System.String)">
+            <summary>
+            获得属性值
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetProperty(System.Object,System.String)">
+            <summary>
+            获得属性值
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetField(System.Object,System.String)">
+            <summary>
+            获得字段值
+            </summary>
+            <param name="obj"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.SetProperty(System.Object,System.String,System.Object)">
+            <summary>
+            设置字段值
+            </summary>
+            <param name="obj"></param>
+            <param name="propertyName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetField``1(System.Object,System.String)">
+            <summary>
+            获得字段值
+            </summary>
+            <param name="obj"></param>
+            <param name="fieldName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.SetField(System.Object,System.String,System.Object)">
+            <summary>
+            设置字段值
+            </summary>
+            <param name="obj"></param>
+            <param name="fieldName"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:SharpEx.ReflectionHelper.GetDescription(System.Type,System.String,System.Boolean)">
+            <summary>
+            获得成员的Description。
+            示例格式：[Description("星期一")]
+            </summary>
+            <param name="type">对象类型</param>
+            <param name="nameInstead">当枚举值没有定义DescriptionAttribute，是否使用枚举名代替，默认是使用。否则返回null</param>
+            <returns>枚举的Description</returns>
+        </member>
+        <member name="T:SharpEx.SerializeHelper">
+            <summary>
+            序列化操作帮助类
+            </summary>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromString``1(System.String)">
+            <summary>
+            从字符串中反序列化成为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="strobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromString(System.String)">
+            <summary>
+            从字符串中反序列化成为对象
+            </summary>
+            <param name="strobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.SaveToString(System.Object)">
+            <summary>
+            将对象序列化为字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.SaveToBinary(System.Object,System.String)">
+            <summary>
+            序列化为二进制对象
+            </summary> 
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromBinary``1(System.String)">
+            <summary>
+            从二进制文件中反序列化
+            </summary> 
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromBinary(System.String)">
+            <summary>
+            从二进制文件中反序列化
+            </summary> 
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromBytes``1(System.Byte[])">
+            <summary>
+            从字符串中反序列化成为对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="strobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromBytes(System.Byte[])">
+            <summary>
+            从字符串中反序列化成为对象
+            </summary>
+            <param name="strobj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.SaveToBytes(System.Object)">
+            <summary>
+            将对象序列化为字符串
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.SaveToXML(System.Object,System.String)">
+            <summary>
+            将数据序列化为XML文件
+            </summary> 
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromXML``1(System.String)">
+            <summary>
+            从XML文件中反序列化
+            </summary>
+        </member>
+        <member name="M:SharpEx.SerializeHelper.LoadFromXML(System.String,System.Type)">
+            <summary>
+            从xml序列中反序列化
+            </summary> 
+        </member>
+        <member name="T:SharpEx.AppCommon">
+            <summary>
+            程序常规变量
+            </summary>
+        </member>
+        <member name="M:SharpEx.AppCommon.NewGuid">
+            <summary>
+            返回唯一标识字符串
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.AppCommon.GetLocalIPv4">
+            <summary>
+            获得本机IP地址列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.AppCommon.IsRunFistTime(System.String,System.String)">
+            <summary>
+            判断系统是否首次运行，若不是则将以前的进程置前，当前进程退出。
+            注：将此段代码置于系统启动Main函数里。否则不起作用。20140728
+            </summary>
+            <param name="appflag">系统唯一标识</param>
+            <param name="exitmessage">如果系统已存在，则提示退出信息。</param>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.AppCommon.GetExistProcess">
+            <summary>
+            查看程序是否已经运行
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:SharpEx.AppCommon.SetForegroud(System.Diagnostics.Process)">
+            <summary>
+            使程序前端显示
+            </summary>
+            <param name="instance"></param>
+        </member>
+        <member name="M:SharpEx.AppCommon.EmptyMemeory">
+            <summary>
+            清理当前进程内存
+            </summary>
+        </member>
+        <member name="P:SharpEx.AppCommon.CurrentDirectory">
+            <summary>
+            获得当前运行程序所在目录
+            </summary>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.StandardShortcut">
+            <summary>
+            Standard Keyboard Shortcuts used by most applications
+            </summary>
+        </member>
+        <member name="T:SharpEx.MouseKeyboard.KeyboardSimulator">
+            <summary>
+            Simulate keyboard key presses
+            </summary>
+        </member>
+    </members>
+</doc>
